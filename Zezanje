@@ -3,13 +3,118 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>26.02.2019. </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Turisticka agencija</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #backgr{
+            position: absolute;
+            height: 1920px;
+            width: 1080px;
+            background-image: url("images/background_travel.jpg");
+            background-repeat: no-repeat;
+        }
+        #navigacija{
+            text-align: center;
+            margin-top: 50px;
+            font-family: cursive;
+            font-size: 24px;
+
+        }
+        .dugmici{
+            display: inline;
+            height: 100px;
+            width: 220px;
+            font-family: cursive;
+            font-size: 35px;
+            border: 2px solid white;
+            color: white;
+            background-color: rgb(255, 0, 0);
+        }
+        #paragraf{
+            background-color: beige;
+            color: rgb(113, 113, 87);
+            font-family: cursive;
+            font-size: 22px;
+            border: 1px solid black;
+            margin: 40px;
+            padding: 40px;
+        }
+        #dest{
+            background-color: rgb(32, 32, 240);
+        }
+        table, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
-    <p id = paragraf>Neki paragraf</p> //komentar
-    <h1>Neki naslov</h1>
-    <script src="main.js"></script>
+    <div id="container">
+        <div id="backgr">
+            <div id="navigacija">
+                <button id="onama" class="dugmici">O nama</button>
+                <button id="dest" class="dugmici">Destinsacije</button>
+                <button id="kont" class="dugmici">Kontakt</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var container = document.getElementById("container");
+        var navigacija = document.getElementById("navigacija"); 
+        var onama = document.getElementById("onama");
+        var kont = document.getElementById("kont");
+        onama.addEventListener("click", function(){
+            var paragraf = document.createElement("p");
+            paragraf.setAttribute("id", "paragraf")
+            navigacija.append(paragraf);
+            paragraf.innerText = "Mi smo nova turisticka agencija osnovana 2018. godine u Beogradu. Cilj ove agencije je da putnicima obezbedi prvoklasna putovanja po Evropi i Latinskoj Americi. Nudimo pakete putovanja, kao i organizaciju individualnih putovanja za putnike svih uzrasta. Nudimo popuste za penzionere, kao i za mlade (do 26 godina). Sva putovanja koja se organizuju sa grupama imaju obezbedjenog strucnog vodica za mesto koje se posecuje. Osim vodica, svaki putnik koji se odluci da putuje preko nas ima obezbedeno BESPLATNO putno osiguranje. Sva putovanja se organizuju avionskim prevozom privatnim avionima agencije, jer smatramo da ne treba da se mucite autobusom! Svake godine putnicima koji su putovali preko nas i koji, samim tim, poseduju identifikacioni broj, bice omoguceno da osvoje nagradno putovanje za Novu godinu. Nadamo se da cemo opravdati Vaše poverenje!";
+
+        });
+        onama.addEventListener("mouseover", function(){
+            onama.style.color ="black";
+
+        });
+        kont.addEventListener("mouseover", function(){
+            kont.style.backgroundColor ="green";
+            kont.style.color= "black"
+
+        });
+        kont.addEventListener("click", function(){
+
+        var tabela = document.createElement("table");
+        tabela.setAttribute("id", "tabela")
+        navigacija.append(tabela);
+        tabela.innerHTML ="Kontakt";
+
+        var linija = document.createElement("tr");
+        var tabela = document.getElementById("tabela");
+        tabela.append(linija);
+        linija.innerHTML= "Ime agencije: ";
+
+        var linija1 = document.createElement("td");
+        var tabela = document.getElementById("tabela");
+        linija.append(linija1);
+        linija1.innerHTML= "TRAVEL FAR";
+
+        var linija2 = document.createElement("tr");
+        tabela.append(linija2);
+        linija2.innerHTML= "Adresa: ";
+
+        var linija3 = document.createElement("td");
+        linija.append(linija3);
+        linija3.innerHTML= "Višnjiceva 7 ";
+        
+
+        var linija2 = document.createElement("tr");
+        tabela.append(linija2);
+        linija2.innerHTML= "Telefon: 011/283-32-13";
+
+
+        });
+    
+    </script>
     
 </body>
 </html>
