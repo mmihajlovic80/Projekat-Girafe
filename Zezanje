@@ -15,7 +15,7 @@
         }
         #navigacija{
             text-align: center;
-            margin-top: 50px;
+            margin-top: 100px;
             font-family: cursive;
             font-size: 24px;
 
@@ -28,7 +28,7 @@
             font-size: 35px;
             border: 2px solid white;
             color: white;
-            background-color: rgb(255, 0, 0);
+            background-color: red;
         }
         #paragraf{
             background-color: beige;
