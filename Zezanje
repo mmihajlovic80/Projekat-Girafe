@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">  
 </head>
 <body>
-    <p>Neki paragraf</p> //komentar
+    <p id = paragraf>Neki paragraf</p> //komentar
     <h1>Neki naslov</h1>
     <script src="main.js"></script>
     
